@@ -1,53 +1,51 @@
 package model;
 
 public class Account {
-    private String userName;
+
+    private String username;
     private String displayName;
     private String password;
-    private int type; // 1: Admin, 0: Nhân viên
+    private int type;
 
-    public Account() { }
+    public Account() {
+    }
 
-    public Account(String userName, String displayName, String password, int type) {
-        this.userName = userName;
+    public Account(String username, String displayName, String password, int type) {
+        this.username = username;
         this.displayName = displayName;
         this.password = password;
         this.type = type;
     }
 
-    // Getters & Setters
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
-    public void setUserName(String userName) {
-        this.userName = userName;
+
+    public void setUsername(String username) {
+        this.username = username;
     }
+
     public String getDisplayName() {
         return displayName;
     }
+
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
     }
+
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
+
     public int getType() {
         return type;
     }
+
     public void setType(int type) {
         this.type = type;
-    }
-
-    // Các phương thức đăng nhập, đăng xuất
-    public void login() {
-        // Thông thường logic đăng nhập sẽ được thực hiện ở DAO
-        System.out.println("Đăng nhập thành công cho " + displayName);
-    }
-
-    public void logout() {
-        System.out.println("Đăng xuất thành công cho " + displayName);
     }
 }

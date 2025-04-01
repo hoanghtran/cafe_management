@@ -1,62 +1,51 @@
 package model;
 
-import java.util.List;
-import dao.BillInfoDAO;
-
 public class BillInfo {
+
     private int id;
-    private int billId;
-    private int foodId;
+    private int idBill;
+    private int idFood;
     private int count;
 
-    public BillInfo() { }
+    public BillInfo() {
+    }
 
-    public BillInfo(int id, int billId, int foodId, int count) {
+    public BillInfo(int id, int idBill, int idFood, int count) {
         this.id = id;
-        this.billId = billId;
-        this.foodId = foodId;
+        this.idBill = idBill;
+        this.idFood = idFood;
         this.count = count;
     }
 
-    // Getters & Setters
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
-    public int getBillId() {
-        return billId;
+
+    public int getIdBill() {
+        return idBill;
     }
-    public void setBillId(int billId) {
-        this.billId = billId;
+
+    public void setIdBill(int idBill) {
+        this.idBill = idBill;
     }
-    public int getFoodId() {
-        return foodId;
+
+    public int getIdFood() {
+        return idFood;
     }
-    public void setFoodId(int foodId) {
-        this.foodId = foodId;
+
+    public void setIdFood(int idFood) {
+        this.idFood = idFood;
     }
+
     public int getCount() {
         return count;
     }
+
     public void setCount(int count) {
         this.count = count;
-    }
-    
-    // Các phương thức sử dụng DAO
-    public static boolean insertBillInfo(BillInfo billInfo) {
-        BillInfoDAO dao = new BillInfoDAO();
-        return dao.insertBillInfo(billInfo);
-    }
-    
-    public static List<BillInfo> getListBillInfo(int billId) {
-        BillInfoDAO dao = new BillInfoDAO();
-        return dao.getListBillInfo(billId);
-    }
-    
-    public static boolean deleteBillInfoByDrinkID(int drinkId) {
-        BillInfoDAO dao = new BillInfoDAO();
-        return dao.deleteBillInfoByDrinkID(drinkId);
     }
 }

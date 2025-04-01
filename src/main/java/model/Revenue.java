@@ -1,46 +1,31 @@
 package model;
 
-import java.util.List;
-import dao.RevenueDAO;
+import java.util.Date;
 
 public class Revenue {
-    private String date;
-    private float total;
+    private Date date;
+    private float totalRevenue;
 
-    public Revenue() { }
+    public Revenue() {}
 
-    public Revenue(String date, float total) {
+    public Revenue(Date date, float totalRevenue) {
         this.date = date;
-        this.total = total;
-    }
+        this.totalRevenue = totalRevenue;
+    } 
 
-    // Getters & Setters
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
-    public void setDate(String date) {
+
+    public void setDate(Date date) {
         this.date = date;
+    } 
+
+    public float getTotalRevenue() {
+        return totalRevenue;
     }
-    public float getTotal() {
-        return total;
-    }
-    public void setTotal(float total) {
-        this.total = total;
-    }
-    
-    // Các phương thức theo spec
-    public static List<Revenue> getListBillInfo(String date) {
-        RevenueDAO dao = new RevenueDAO();
-        return dao.getListBillInfo(date);
-    }
-    
-    public static List<Revenue> getDateBill(String date) {
-        RevenueDAO dao = new RevenueDAO();
-        return dao.getDateBill(date);
-    }
-    
-    public static List<Revenue> statisticalBill(String fromDate, String toDate) {
-        RevenueDAO dao = new RevenueDAO();
-        return dao.statisticalBill(fromDate, toDate);
+
+    public void setTotalRevenue(float totalRevenue) {
+        this.totalRevenue = totalRevenue;
     }
 }

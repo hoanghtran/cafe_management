@@ -1,22 +1,20 @@
 package model;
 
 public class Employee extends Account {
+
     public Employee() {
         super();
     }
 
-    public Employee(String userName, String displayName, String password, int type) {
-        super(userName, displayName, password, type);
+    public Employee(String username, String displayName, String password, int type) {
+        super(username, displayName, password, type);
     }
     
-    // Các phương thức riêng cho nhân viên
     public void changeInfoAccount() {
-        // Logic thay đổi thông tin cá nhân
-        System.out.println("Nhân viên " + getDisplayName() + " thay đổi thông tin cá nhân.");
+        // Gọi AccountDAO.updateAccount(this) hoặc logic tương ứng
     }
     
     public void viewInfoAccount() {
-        // Logic xem thông tin cá nhân
-        System.out.println("Thông tin cá nhân của nhân viên: " + getDisplayName());
+        // Có thể hiển thị thông tin cá nhân
     }
 }
